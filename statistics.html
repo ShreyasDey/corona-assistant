@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Covid Assistant</title>
+    <style>.center {text-align: center;border: 3px solid green; font-size:40px; text-decoration:underline;}
+    .centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}</style>
+</head>
+<body style="background-color:powderblue;">
+<div class="center"><h1><b><i>Statistics for India</i></b></h1></div><br><br>
+    <div class="dropdown" style="display: flex;justify-content: center;">
+        <button onclick="myFunction()" class="dropbtn">Select State</button>
+        <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AP"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AP"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AP"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AP"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AP"]["total"]["vaccinated"]);null;'>Andhra Pradesh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AR"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AR"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AR"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AR"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AR"]["total"]["vaccinated"]);null;'>Arunachal Pradesh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AS"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AS"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AS"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AS"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AS"]["total"]["vaccinated"]);null;'>Assam</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["BR"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["BR"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["BR"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["BR"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["BR"]["total"]["vaccinated"]);null;'>Bihar</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CT"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CT"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CT"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CT"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CT"]["total"]["vaccinated"]);null;'>Chhattisgarh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GA"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GA"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GA"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GA"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GA"]["total"]["vaccinated"]);null;'>Goa</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GJ"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GJ"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GJ"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GJ"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["GJ"]["total"]["vaccinated"]);null;'>Gujarat</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HR"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HR"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HR"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HR"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HR"]["total"]["vaccinated"]);null;'>Haryana</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HP"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HP"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HP"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HP"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["HP"]["total"]["vaccinated"]);null;'>Himachal Pradesh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JH"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JH"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JH"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JH"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JH"]["total"]["vaccinated"]);null;'>Jharkhand</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KA"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KA"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KA"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KA"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KA"]["total"]["vaccinated"]);null;'>Karnataka</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KL"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KL"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KL"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KL"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["KL"]["total"]["vaccinated"]);null;'>Kerala</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MP"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MP"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MP"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MP"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MP"]["total"]["vaccinated"]);null;'>Madhya Pradesh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MH"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MH"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MH"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MH"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MH"]["total"]["vaccinated"]);null;'>Maharashtra</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MN"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MN"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MN"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MN"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MN"]["total"]["vaccinated"]);null;'>Manipur</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["ML"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["ML"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["ML"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["ML"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["ML"]["total"]["vaccinated"]);null;'>Meghalaya</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MZ"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MZ"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MZ"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MZ"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["MZ"]["total"]["vaccinated"]);null;'>Mizoram</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["NL"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["NL"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["NL"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["NL"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["NL"]["total"]["vaccinated"]);null;'>Nagaland</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["OR"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["OR"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["OR"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["OR"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["OR"]["total"]["vaccinated"]);null;'>Odisha</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PB"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PB"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PB"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PB"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PB"]["total"]["vaccinated"]);null;'>Punjab</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["RJ"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["RJ"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["RJ"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["RJ"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["RJ"]["total"]["vaccinated"]);null;'>Rajasthan</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["SK"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["SK"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["SK"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["SK"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["SK"]["total"]["vaccinated"]);null;'>Sikkim</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TN"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TN"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TN"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TN"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TN"]["total"]["vaccinated"]);null;'>Tamil Nadu</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TG"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TG"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TG"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TG"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TG"]["total"]["vaccinated"]);null;'>Telangana</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TR"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TR"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TR"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TR"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["TR"]["total"]["vaccinated"]);null;'>Tripura</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UP"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UP"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UP"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UP"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UP"]["total"]["vaccinated"]);null;'>Uttar Pradesh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UT"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UT"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UT"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UT"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["UT"]["total"]["vaccinated"]);null;'>Uttarakhand</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["WB"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["WB"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["WB"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["WB"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["WB"]["total"]["vaccinated"]);null;'>West Bengal</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AN"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AN"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AN"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AN"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["AN"]["total"]["vaccinated"]);null;'>Andaman and Nicobar Islands</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CH"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CH"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CH"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CH"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["CH"]["total"]["vaccinated"]);null;'>Chandigarh</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["DL"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["DL"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["DL"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["DL"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["DL"]["total"]["vaccinated"]);null;'>Delhi</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JK"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JK"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JK"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JK"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["JK"]["total"]["vaccinated"]);null;'>Jammu and Kashmir</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["LD"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["LD"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["LD"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["LD"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["LD"]["total"]["vaccinated"]);null;'>Lakshadweep</a>
+            <a href='javascript:function Get(yourUrl){var Httpreq = new XMLHttpRequest();Httpreq.open("GET",yourUrl,false);Httpreq.send(null);return Httpreq.responseText;};alert("Confirmed cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PY"]["total"]["confirmed"]+"\n"+"Deceased cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PY"]["total"]["deceased"]+"\n"+"Recovered cases: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PY"]["total"]["recovered"]+"\n"+"Tested: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PY"]["total"]["tested"]+"\n"+"Vaccinated: "+JSON.parse(Get("https://api.covid19india.org/v4/min/data.min.json"))["PY"]["total"]["vaccinated"]);null;'>Puducherry</a>
+        </div>
+    </div>
+<div style="text-align: center;">
+    <a href="country_statistics.html" target="_blank"><button class="button" type="button">Country-wise data</button></a><br><br><div></div>
+    <a href="introduction.html"><button class="button" type="button">Home</button></a><br><br><div></div>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script></div>
+</body>
+</html>

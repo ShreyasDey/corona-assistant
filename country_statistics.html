@@ -16,7 +16,7 @@
     Httpreq.open("GET",yourUrl,false);
     Httpreq.send(null);
     return Httpreq.responseText;}
-    data=JSON.parse(Get("https://api.covid19india.org/data.json"))
+    data=JSON.parse(Get("https://data.covid19india.org/data.json"))
     dailyconfirmed=data["cases_time_series"][data["cases_time_series"].length-1]["dailyconfirmed"]
     dailydeceased=data["cases_time_series"][data["cases_time_series"].length-1]["dailydeceased"]
     dailyrecovered=data["cases_time_series"][data["cases_time_series"].length-1]["dailyrecovered"]

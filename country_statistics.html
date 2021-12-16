@@ -35,7 +35,7 @@
     updated_time_case=data["cases_time_series"][data["cases_time_series"].length-1]["date"]
     updated_time_others=data["tested"][[data["tested"].length-1]]["updatetimestamp"]
     document.getElementById("out").innerHTML="<pre>"+"Confirmed cases increased today: "+dailyconfirmed+"<br>Deceased cases increased today: "+" "+dailydeceased+"<br>Recovered cases increased today: "+dailyrecovered+"<br>Total confirmed cases:           "+totalconfirmed+"<br>Total deceased cases:            "+totaldeceased+"<br>Total recovered cases:           "+totalrecovered+"<br>Total individuals tested:        "+totaltested;
-    document.getElementById("in").innerHTML="<pre>"+"Total vaccination registrations:       "+register+"<br>Total 1st doses of vaccine administered: "+firstdose+"<br>Total 2nd doses of vaccine administered:  "+seconddose+"<br>Total healthcare workers vaccinated:       "+healthcare+"<br>Total frontline workers vaccinated:       "+frontline+"<br>Total individuals vaccinated: "+totalvaccinated+"<br>Total vaccination sessions conducted:          "+session+"<br>Total RTPCR Samples collected: "+rtpcr+"<br>Cases data updated on "+updated_time_case+"<br>Vaccine and Testing date updated on "+updated_time_others+" IST";
+    document.getElementById("in").innerHTML="<pre>"+"Total vaccination registrations:       "+register+"<br>Total 1st doses of vaccine administered: "+firstdose+"<br>Total 2nd doses of vaccine administered:  "+seconddose+"<br>Total healthcare workers vaccinated:       "+healthcare+"<br>Total frontline workers vaccinated:       "+frontline+"<br>Total individuals vaccinated: "+totalvaccinated+"<br>Total vaccination sessions conducted:          "+session+"<br>Total RTPCR Samples collected: "+rtpcr+;
 </script>
 </body>
 </html>
